@@ -1,0 +1,38 @@
+/*! purgecss start ignore */
+@tailwind base;
+/*! purgecss end ignore */
+
+@import 'base/all';
+
+@tailwind components;
+
+@import 'components/all';
+
+@tailwind utilities;
+
+.theme-light{
+    --bg-background-primary: #ffffff;
+    --bg-background-secondary:#004e97;
+    --bg-background-ternary:#e2e8f0;
+    --bg-background-nav-menu: #3182ce;
+    --text-copy-primary: #2d3748;
+    --text-copy-nav-item: #2a4365;
+    --bg-background-form:rgb(245, 244, 244);
+
+    --card-shadow:  0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.theme-dark{
+    --bg-background-primary: #0D2438;
+    --bg-background-secondary:#102C44;
+    --bg-background-ternary:#1E3951;
+    --bg-background-nav-menu: #2a4365;
+    --text-copy-primary: #cbd5e0;
+    --text-copy-nav-item: #3182ce;
+    --bg-background-form: #1a202c;
+  --card-shadow:  0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
+}
+
+.content-wrapper{
+  transition: background-color .25s;
+}

@@ -1,0 +1,12 @@
+{
+    "idioms": [
+        {
+            "language": "en-us",
+            "title": "menu.english"
+        },
+        {
+            "language": "pt-br",
+            "title": "menu.portuguese"
+        }
+    ]
+}

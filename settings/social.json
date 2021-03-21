@@ -1,0 +1,16 @@
+{
+  "social": [
+    {
+      "icon": "linkedin-in",
+      "link": "https://www.linkedin.com/in/lucasfaquino/"
+    },
+    {
+      "icon": "github",
+      "link": "https://github.com/LucasFelixAquino"
+    },
+    {
+      "icon": "stack-overflow",
+      "link": "https://stackoverflow.com/users/11226027/lucasfelixaquino"
+    }
+  ]
+}

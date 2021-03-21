@@ -1,0 +1,59 @@
+{
+    "skills": [
+        {
+            "name": "C#",
+            "percent": "85%",
+            "background": "#38225d",
+            "textColor": "text-white",
+            "links": [
+                {
+                    "icon": "certificate",
+                    "link": "https://cursos.alura.com.br/user/lucasfaquino/degree-dotnet-236/certificate",
+                    "tooltip": "skills.certificateAluraDotNet"
+                }
+            ]
+        },
+        {
+            "name": "Javascript",
+            "percent": "85%",
+            "background": "#f7df1e",
+            "textColor": "text-black"
+        },
+        {
+            "name": "Vue.js",
+            "percent": "85%",
+            "background": "linear-gradient(to right, #35495e, #42b883)",
+            "textColor": "text-white"
+        },
+        {
+            "name": "Python",
+            "percent": "55%",
+            "background": "linear-gradient(to right, #ffde57, #4584b6)",
+            "textColor": "text-white"
+        },
+        {
+            "name": "MongoDB",
+            "percent": "85%",
+            "background": "#589636",
+            "textColor": "text-white"
+        },
+        {
+            "name": "SQL",
+            "percent": "75%",
+            "background": "linear-gradient(to right, #00758f, #f29111)",
+            "textColor": "text-white"
+        },
+        {
+            "name": "Flutter + Dart",
+            "percent": "35%",
+            "background": "linear-gradient(to right, #40C4FF, #1967D2)",
+            "textColor": "text-white"
+        },
+        {
+            "name": "HTML + CSS",
+            "percent": "90%",
+            "background": "linear-gradient(to right, #e34f26, #009CDE)",
+            "textColor": "text-white"
+        }
+    ]
+}

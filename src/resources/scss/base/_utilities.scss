@@ -1,0 +1,38 @@
+.transition {
+    transition: 0.25s all ease-out;
+}
+
+[data-lazy] {
+    @apply opacity-0 w-full;
+    transition: opacity 0.25s ease-in;
+    min-height: 120px;
+}
+
+.loaded {
+    @apply opacity-100;
+}
+
+.inner {
+    @apply w-full max-w-6xl ml-auto mr-auto px-6;
+}
+
+
+.shell {
+    height: 20px;
+    width: 250px;
+    border: 1px solid #aaa;
+    border-radius: 16px;
+    padding: 0px;
+  }
+  
+  .bar {   
+    height: 18px;
+    width: 15px;
+    border-radius: 12px;
+    span {
+      float: right;
+      padding: 0px 5px;      
+      font-size: 0.7em
+    }
+  }
+  
