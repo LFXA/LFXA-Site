@@ -2,11 +2,11 @@
   <div class="relative">
     <search-focus @keyup="focusSearch"></search-focus>
 
-    <div class="">
+    <div class="px-4">
       <input
         type="text"
-        placeholder='Search (Press  "/" to focus)'
-        class="bg-background-form border border-gray-500 rounded-full px-4 pl-10 py-2 outline-none focus:border-blue-500"
+        :placeholder="$t('menu.searchInputPlaceHolder')"
+        class="bg-background-form border border-gray-500 set-width rounded-full px-4 pl-10 py-2 outline-none focus:border-blue-500"
         v-model="query"
         @input="softReset"
         @keyup="performSearch"
@@ -70,7 +70,7 @@
             class="bg-background-form font-normal w-full border-b cursor-pointer p-4"
           >
             <p class="my-0">
-              No results for '<strong>{{ query }}</strong
+              {{ $t("menu.searchInputNoResult") }} '<strong>{{ query }}</strong
               >'
             </p>
           </div>
@@ -183,5 +183,8 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+.set-width {
+  width: 310px;
 }
 </style>

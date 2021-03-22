@@ -5,7 +5,9 @@ export const menuPTBR =
     about: "Sobre",
     blog: "Blog",
     portuguese: "Português",
-    english: "Inglês"
+    english: "Inglês",
+    searchInputPlaceHolder: 'Pesquisar (Pressione  \"/\" para focar)',
+    searchInputNoResult: "Não há resultado para"
 }
 
 export const menuENUS =
@@ -15,5 +17,7 @@ export const menuENUS =
     blog: "Blog",
     about: "About",
     portuguese: "Portuguese",
-    english: "English"
+    english: "English",
+    searchInputPlaceHolder: "Search (Press  \"/\" to focus)",
+    searchInputNoResult: "No results for"
 }
