@@ -7,9 +7,6 @@
 <script>
 import Sobre from "../../layouts/section/Sobre";
 export default {
-  data() {
-    return {};
-  },
   components: {
     Sobre
   },
