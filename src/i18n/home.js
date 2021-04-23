@@ -7,6 +7,8 @@ export const homePagePTBR =
     inputMessage: "Mensagem",
     subContact: "Qualquer dúvida, agradecimento, planejamento e orçamento.",
     btnFormContact: "Envie uma menssagem!",
+    formRequired: " (obrigatório)" ,
+    formOptional: " (opcional)"
 }
 
 export const homePageENUS =
@@ -18,4 +20,6 @@ export const homePageENUS =
     inputMessage: "Message",
     subContact: "Any questions, thanks, planning and budget.",
     btnFormContact: "Send a message!",
+    formRequired: " (required)" ,
+    formOptional: " (optional)"
 }

@@ -15,8 +15,8 @@
             <p>{{ $t("home.subContact") }}</p>
             <form class="form">
               <div class="flex flex-wrap mb-6 -mx-4">
-                <div class="row required w-full md:w-1/3 mb-6 md:mb-0 px-4">
-                  <label for="name">{{ $t("home.inputName") }}</label>
+                <div class="row required w-full md:w-1/3 mb-6 md:mb-0 px-4" >
+                  <label for="name" :data-after="$t('home.formRequired')">{{ $t("home.inputName") }}</label>
                   <input
                     class="input bg-background-form"
                     id="name"
@@ -28,7 +28,7 @@
                   />
                 </div>
                 <div class="row required w-full md:w-1/3 mb-6 md:mb-0 px-4">
-                  <label for="email">{{ $t("home.inputEmail") }}</label>
+                  <label for="email" :data-after="$t('home.formRequired')">{{ $t("home.inputEmail") }}</label>
                   <input
                     class="input bg-background-form"
                     id="email"
@@ -42,7 +42,7 @@
                   />
                 </div>
                 <div class="row w-full md:w-1/3 mb-6 md:mb-0 px-4">
-                  <label for="phone">{{ $t("home.inputPhone") }}</label>
+                  <label for="phone" :data-after="$t('home.formOptional')">{{ $t("home.inputPhone") }}</label>
                   <input
                     class="input bg-background-form"
                     id="phone"
@@ -53,7 +53,7 @@
                 </div>
               </div>
               <div class="row">
-                <label for="message">{{ $t("home.inputMessage") }}</label>
+                <label for="message" :data-after="$t('home.formOptional')">{{ $t("home.inputMessage") }}</label>
                 <textarea
                   class="textarea bg-background-form"
                   id="message"
