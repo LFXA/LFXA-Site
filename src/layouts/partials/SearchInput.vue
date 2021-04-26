@@ -79,10 +79,34 @@
     </transition>
   </div>
 </template>
-
-
-
-
+<static-query>
+query Search {
+  allPost {
+    edges {
+      node {
+        id
+        path
+        title
+        summary
+        headings {
+          depth
+          value
+          anchor
+        }
+      }
+    }
+  }
+  allDocumentation {
+    edges {
+      node {
+        id
+        path
+        title
+      }
+    }
+  }
+}
+</static-query>
 <script>
 import SearchFocus from "./SearchFocus";
 export default {

@@ -70,8 +70,7 @@ export default {
 
 <page-query>
   query {    
-    allBlog {
-      
+    allBlog {      
       edges {
         node {
           title
@@ -90,4 +89,3 @@ export default {
     }
   }
 </page-query>
-
