@@ -2,7 +2,7 @@
   <div class="relative">
     <search-focus @keyup="focusSearch"></search-focus>
 
-    <div class="px-4">
+    <div class="relative w-80">
       <input
         type="text"
         :placeholder="$t('menu.searchInputPlaceHolder')"
@@ -35,7 +35,7 @@
       </div>
       <div
         v-if="query.length > 0"
-        class="absolute top-0 right-0 text-2xl mr-3 cursor-pointer text-gray-600 hover:text-gray-800"
+        class="absolute top-0 right-0 text-2xl mr-3 cursor-pointer text-black hover:text-gray-800"
         style="top: 2px"
         @click="reset"
       >
@@ -81,22 +81,16 @@
 </template>
 <static-query>
 query Search {
-  allPost {
+  allBlog {
     edges {
       node {
         id
         path
         title
-        summary
-        headings {
-          depth
-          value
-          anchor
-        }
       }
     }
   }
-  allDocumentation {
+  allBlog {
     edges {
       node {
         id
@@ -116,7 +110,7 @@ export default {
   computed: {
     pages() {
       let result = [];
-      const allPost = this.$static.allPost.edges.map((edge) => edge.node);
+      const allPost = this.$static.allBlog.edges.map((edge) => edge.node);
       allPost.forEach((page) => {
         result.push({
           path: page.path,
@@ -124,7 +118,7 @@ export default {
           summary: page.summary,
         });
       });
-      const allDocs = this.$static.allDocumentation.edges.map(
+      const allDocs = this.$static.allBlog.edges.map(
         (edge) => edge.node
       );
       allDocs.forEach((page) => {

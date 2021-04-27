@@ -20,6 +20,16 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/source-graphql',
+      options: {
+        url:  process.env.GRIDSOME_REALM_URL_GRPHQL,
+        fieldName: 'posts',
+        headers: {
+          apiKey: `${process.env.GRIDSOME_REALM_API_KEYS}`,
+        },
+      }
+    },
+    {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Author',

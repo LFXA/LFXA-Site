@@ -2,7 +2,7 @@
   <div>
     <nav
       id="mobile-nav"
-      class="mobile-nav content-wrapper fixed left-0 top-0 h-screen w-full overflow-y-auto pt-12 bg-background-nav-menu z-50 md:hidden"
+      class="mobile-nav content-wrapper fixed left-0 top-0 h-screen container  flex  justify-between px-4 pt-12 bg-background-nav-menu z-50 md:hidden"
       :class="toggleNav ? 'menu-visible' : ''"
     >
       <ul>

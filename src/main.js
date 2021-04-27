@@ -7,6 +7,7 @@ import { faBars, faCertificate, faSun, faMoon } from '@fortawesome/free-solid-sv
 import { faGithub, faLinkedinIn, faStackOverflow } from '@fortawesome/free-brands-svg-icons'
 import { i18n } from '../src/i18n'
 import VueTippy, { TippyComponent } from "vue-tippy";
+import VueFuse from 'vue-fuse'
 config.autoAddCss = false;
 library.add(faGithub, faLinkedinIn, faBars, faStackOverflow, faCertificate, faSun, faMoon)
 
@@ -18,6 +19,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.use(i18n)
   appOptions.i18n = i18n
   Vue.use(VueTippy);
+  Vue.use(VueFuse);
   Vue.component("tippy", TippyComponent);
   // Add attributes to HTML tag
   head.htmlAttrs = { class: 'min-h-full antialiased' }

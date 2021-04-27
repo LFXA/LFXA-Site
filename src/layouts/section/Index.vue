@@ -5,7 +5,7 @@
       <p>MEU SITE</p>
     </div>
     <div class="overflow-x-hidden">
-      <div class="contact-me bg-background-primary p-16 rounded-lg">
+      <div class="contact-me bg-background-primary p-1 content-wrapper rounded-lg">
         <section
           id="container-centre"
           class="container-inner mx-auto text-xl pb-4"
