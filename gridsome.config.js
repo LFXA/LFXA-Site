@@ -18,17 +18,7 @@ module.exports = {
       options: {
         path: 'settings/*.json'
       }
-    },
-    {
-      use: '@gridsome/source-graphql',
-      options: {
-        url:  process.env.GRIDSOME_REALM_URL_GRPHQL,
-        fieldName: 'posts',
-        headers: {
-          apiKey: `${process.env.GRIDSOME_REALM_API_KEYS}`,
-        },
-      }
-    },
+    },   
     {
       use: '@gridsome/source-filesystem',
       options: {
@@ -41,22 +31,13 @@ module.exports = {
       options: {
         typeName: 'Blog',
         path: './content/blog/**/*.md',
-        refs: {
-          author: 'Author',
-          tags: {
-            typeName: 'Tag',
-            create: true
-          },
-          category: {
-            typeName: 'Category',
-            create: true
-          }
-        }
+       
+        
       }
     }
   ],
   templates: {
-    Blog: [{
+    posts: [{
       path: '/blog/:title',
       component: './src/templates/BlogEntry.vue'
     }],

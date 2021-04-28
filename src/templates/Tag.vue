@@ -31,7 +31,7 @@
       belongsTo {
         edges {
           node {
-            ... on Blog {
+            ... on posts {
               id
               title
               path 

@@ -1,6 +1,6 @@
 <template>
     <Layout>
-    <blog :posts="$page.posts.posts"></blog>
+    <blog :posts="$page.allPosts.edges"></blog>
   </Layout>
 </template>
 <script>
@@ -16,15 +16,20 @@ export default {
 </script>
 <page-query>
   query {    
-    posts {      
-      posts {       
+    allPosts {     
+      edges {
+        node {
           title
           path
-          image  
-          image_caption        
+          image
+          humanTime : created(format:"Do MMMM YYYY")
+          datetime : created(format:"ddd MMM DD YYYY hh:mm:ss zZ")
           author 
-          category
-        
+          category {
+          title
+          path
+      } 
+        }
       }
     }
   }

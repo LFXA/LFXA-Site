@@ -2,7 +2,7 @@
   <Layout>
     <section id="container-centre" class="column centre flex-1">
       <h1
-        class="page-title text-blue-900 text-3xl md:text-center md:text-5xl mb-16 lg:mb-24 lg:text-6xl"
+        class="page-title text-black-900 text-3xl md:text-center md:text-5xl mb-16 lg:mb-24 lg:text-6xl"
       >Category — {{ $page.category.title }}</h1>
       <div class="posts">
         <article
@@ -33,7 +33,7 @@
       belongsTo {
         edges {
           node {
-            ... on Blog {
+            ... on posts {
               id
               title
               path 
