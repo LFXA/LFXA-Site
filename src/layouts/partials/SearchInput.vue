@@ -61,7 +61,7 @@
             {{ post.item.title }}
 
             <span class="block font-normal text-copy-primary text-sm my-1">{{
-              post.item.summary
+              post.item.excerpt
             }}</span>
           </a>
 
@@ -80,25 +80,18 @@
   </div>
 </template>
 <static-query>
-query Search {
-  allBlog {
+query {
+  allPosts {
     edges {
       node {
         id
         path
         title
+        excerpt
+        lang
       }
     }
-  }
-  allBlog {
-    edges {
-      node {
-        id
-        path
-        title
-      }
-    }
-  }
+  }  
 }
 </static-query>
 <script>
@@ -110,23 +103,15 @@ export default {
   computed: {
     pages() {
       let result = [];
-      const allPost = this.$static.allBlog.edges.map((edge) => edge.node);
+      const allPost = this.$static.allPosts.edges.map((edge) => edge.node);
       allPost.forEach((page) => {
+        if( this.$i18n.locale == page.lang) 
         result.push({
           path: page.path,
           title: page.title,
-          summary: page.summary,
+          excerpt: page.excerpt,
         });
-      });
-      const allDocs = this.$static.allBlog.edges.map(
-        (edge) => edge.node
-      );
-      allDocs.forEach((page) => {
-        result.push({
-          path: page.path,
-          title: page.title,
-        });
-      });
+      });     
       return result;
     },
   },

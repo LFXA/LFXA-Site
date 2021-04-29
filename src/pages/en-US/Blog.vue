@@ -1,10 +1,10 @@
 <template>
     <Layout>
-    <blog :posts="$page.allPosts.edges" :categories="$page.allCategory.edges"></blog>
+    <blog :posts="$page.allPosts.edges"></blog>
   </Layout>
 </template>
 <script>
-import Blog from "../layouts/section/Blog";
+import Blog from "../../layouts/section/Blog";
 export default {
   components: {
     Blog
@@ -16,7 +16,7 @@ export default {
 </script>
 <page-query>
   query {    
-    allPosts(filter: {lang:{ eq: "pt-br"}}) {     
+    allPosts(filter: {lang:{ eq: "en-us"}}) {     
       edges {
         node {
           title
@@ -32,14 +32,5 @@ export default {
         }
       }
     }
-    allCategory(filter: {lang:{ eq: "pt-br"}}){
-    edges{
-      node{
-        title
-        id
-        path
-      }
-    }
-  }
   }
 </page-query>

@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import { linkPTBR, linkENUS } from "../../i18n/link";
 export default {
   name: "idiom-select",
   data() {

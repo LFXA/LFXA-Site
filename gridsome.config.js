@@ -18,22 +18,6 @@ module.exports = {
       options: {
         path: 'settings/*.json'
       }
-    },   
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'Author',
-        path: './content/author/*.md'
-      }
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'Blog',
-        path: './content/blog/**/*.md',
-       
-        
-      }
     }
   ],
   templates: {

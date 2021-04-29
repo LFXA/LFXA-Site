@@ -20,7 +20,7 @@ module.exports = function (api) {
            _id 
            title
            path
-           idPost
+           lang
            image 
            created 
            image_caption        
@@ -41,13 +41,15 @@ module.exports = function (api) {
       categories.addNode({
         id: post.category,
         title: post.category,
-        path: '/category/'+post.category
+        path: '/category/'+post.category,
+        lang: post.lang
       });      
       for (const postTag of post.tags){
       tags.addNode({
             id: postTag,
             title: postTag,
-            path: '/tag/'+postTag
+            path: '/tag/'+postTag,
+            lang: post.lang
       });
      
       }  
@@ -55,7 +57,7 @@ module.exports = function (api) {
         id: post._id,
         title: post.title,
         path: post.path,
-        idPost: post.idPost,
+        lang: post.lang,
         image: post.image,
         created: post.created,
         image_caption: post.image_caption,
