@@ -8,6 +8,9 @@ import { faGithub, faLinkedinIn, faStackOverflow } from '@fortawesome/free-brand
 import { i18n } from '../src/i18n'
 import VueTippy, { TippyComponent } from "vue-tippy";
 import VueFuse from 'vue-fuse'
+import Vssue from 'vssue';
+import GithubV3 from '@vssue/api-github-v3';
+import 'vssue/dist/vssue.css'
 config.autoAddCss = false;
 library.add(faGithub, faLinkedinIn, faBars, faStackOverflow, faCertificate, faSun, faMoon)
 
@@ -20,6 +23,14 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   appOptions.i18n = i18n
   Vue.use(VueTippy);
   Vue.use(VueFuse);
+  Vue.use(Vssue, {
+    api: GithubV3,
+    owner: 'LucasFelixAquino',
+    repo: 'LFXA-Site',
+    clientId: '68dbc48f88492c30bd13',
+    clientSecret: '34b6ed44f514f46f912a568cb7ca42f2b8be62f4',
+  })
+
   Vue.component("tippy", TippyComponent);
   // Add attributes to HTML tag
   head.htmlAttrs = { class: 'min-h-full antialiased' }

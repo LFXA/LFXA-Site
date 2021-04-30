@@ -38,6 +38,9 @@
           </li>
         </ul>
       </div>
+    
+      <Vssue title="LFXA_SITELOCAL" />
+      
     </section>
   </Layout>
 </template>
