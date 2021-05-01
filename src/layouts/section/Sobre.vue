@@ -1,5 +1,5 @@
 <template>
-  <section id="container-centre" class="column container-inner">
+  <section id="container-centre" class="column inner container-inner">
     <h2 class="page-title">{{ $t("about.title") }}</h2>
     <div class="md:flex py-8">
       <img

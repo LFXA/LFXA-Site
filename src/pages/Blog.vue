@@ -1,6 +1,6 @@
 <template>
     <Layout>
-    <blog :posts="$page.allPosts.edges" :categories="$page.allCategory.edges"></blog>
+    <blog :posts="$page.allPosts.edges" :categories="$page.allCategory.edges" :alltags="$page.allTag.edges"></blog>
   </Layout>
 </template>
 <script>
@@ -26,9 +26,9 @@ export default {
           datetime : created(format:"ddd MMM DD YYYY hh:mm:ss zZ")
           author 
           category {
-          title
-          path
-      } 
+            title
+            path
+          }  
         }
       }
     }
@@ -41,5 +41,17 @@ export default {
       }
     }
   }
+   allTag(filter: {lang:{ eq: "pt-br"}}, sort: [{by: "title",order:ASC}]){
+    edges{
+      node{
+        title
+        id
+        path
+        belongsTo{
+          totalCount
+        }
+      }
+    }
   }
+}
 </page-query>

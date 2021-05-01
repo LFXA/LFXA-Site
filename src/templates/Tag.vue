@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <section id="container-centre" class="column centre flex-1">
+    <section id="container-centre" class="column inner centre flex-1">
       <h1
         class="page-title text-black-900 text-3xl md:text-center md:text-5xl mb-16 lg:mb-24 lg:text-6xl"
       >Tag — {{ $page.tag.title }}</h1>

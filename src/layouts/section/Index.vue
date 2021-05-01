@@ -1,5 +1,5 @@
 <template>
-  <section id="container-centre" class="column centre flex-1">
+  <section id="container-centre" class="column inner centre flex-1">
     <h1 class="page-title">Bem vindo!</h1>
     <div class="content">
       <p>MEU SITE</p>

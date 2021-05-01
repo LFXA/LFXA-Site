@@ -24,7 +24,7 @@
         </figure>
       </div>
 
-      <div class="content post md:px-16">
+      <div class="content post mb-12">
         <p v-html="$page.posts.excerpt"></p>
 
         <div v-html="$page.posts.content"></div>
@@ -38,9 +38,10 @@
           </li>
         </ul>
       </div>
-    
-      <Vssue title="LFXA_SITELOCAL" />
-      
+    <div>
+      <Disqus shortname="lfxa" :identifier="$page.posts.path" />
+      <!-- <Vssue title="LFXA_SITELOCAL" /> -->
+      </div>
     </section>
   </Layout>
 </template>
