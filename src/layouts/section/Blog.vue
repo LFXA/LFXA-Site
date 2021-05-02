@@ -13,11 +13,11 @@
         <g-link class=" mr-5" v-for="entryCat in categories" :key="entryCat.node.id" :to="entryCat.node.path">{{entryCat.node.title}}</g-link>    
         
       </div>     
-      <div class="p-6 grid grid-rows-2 grid-cols-6 gap-4">
+      <div class="p-6 grid grid-cols-6 gap-4">
         
-          <div class="posts grid  grid-cols-3  grid-rows-1 gap-4 lg:col-span-5 col-span-6 m-4">
+          <div class="posts grid  grid-cols-4  grid-rows-1 gap-4 lg:col-span-5 col-span-6 content-center m-4">
             <div
-              class="w-full row-span-1 lg:col-span-1  col-span-3 m-4 p-8"
+              class="w-full row-span-1 lg:col-span-1  col-span-4  p-2"
               v-for="entry in posts"
               :key="entry.node.id"
             >
@@ -63,11 +63,12 @@
               </article>
             
             </div>       
+          
           </div>
         <div class="m-4 lg:col-span-1 col-span-6 bg-blue-900 overflow-hidden rounded-lg shadow-card ">
           <h4 class="m-5">Tags</h4>
-           <div class=" p-2 mx-2"  v-for="entryTag in alltags" :key="entryTag.node.id">   
-              <g-link class="flex text-copy-primary justify-around" :to="entryTag.node.path"><span>{{entryTag.node.title}} </span>
+           <div class=" p-1 mx-2"  v-for="entryTag in alltags" :key="entryTag.node.id">   
+              <g-link class="flex text-copy-primary justify-between" :to="entryTag.node.path"><span>{{entryTag.node.title}} </span>
                 <span class="rounded-full h-6 w-6 flex items-center justify-center  text-copy-primary bg-blue-500 text-xl">  {{entryTag.node.belongsTo.totalCount}}
                    </span> 
               </g-link>           
