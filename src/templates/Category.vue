@@ -3,7 +3,7 @@
     <section id="container-centre" class="column inner centre flex-1">
       <h1
         class="page-title text-black-900 text-3xl md:text-center md:text-5xl mb-16 lg:mb-24 lg:text-6xl"
-      >Category — {{ $page.category.title }}</h1>
+      >{{$t("blog.category")}} — {{ $page.category.title }}</h1>
       <div class="posts">
         <article
           class="text-gray-500 mb-8 pb-8 border-b border-gray-200"

@@ -5,6 +5,7 @@ import { linkPTBR, linkENUS } from "../i18n/link"
 import { skillsPTBR, skillsENUS } from "../i18n/skills"
 import { aboutPagePTBR, aboutPageENUS } from "../i18n/about"
 import { homePagePTBR, homePageENUS } from "../i18n/home"
+import {blogPagePTBR ,blogPageENUS } from "../i18n/blog"
 Vue.use(VueI18n);
 
 const messages = {
@@ -16,7 +17,8 @@ const messages = {
         footerMsg2: "using",
         footerMsg3: "and",
         about: aboutPageENUS,
-        home: homePageENUS
+        home: homePageENUS,
+        blog:blogPageENUS
     },
 
     "pt-br": {
@@ -27,7 +29,8 @@ const messages = {
         footerMsg2: "usando",
         footerMsg3: "e",
         about: aboutPagePTBR,
-        home: homePagePTBR
+        home: homePagePTBR,
+        blog:blogPagePTBR
     },
 };
 

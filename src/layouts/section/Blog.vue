@@ -7,17 +7,17 @@
         Blog
       </h1>
       <h2 class=" text-3xl  mb-4 ml-5">
-        Categorias
+        {{$t("blog.categories")}}
       </h2>
       <div class="flex p-4 mb-5 justify-center  bg-blue-800">   
         <g-link class=" mr-5" v-for="entryCat in categories" :key="entryCat.node.id" :to="entryCat.node.path">{{entryCat.node.title}}</g-link>    
         
       </div>     
-      <div class="p-6 grid grid-cols-6 gap-4">
+      <div class="p-8 grid grid-cols-6 gap-4">
         
           <div class="posts grid  grid-cols-4  grid-rows-1 gap-4 lg:col-span-5 col-span-6 content-center m-4">
             <div
-              class="w-full row-span-1 lg:col-span-1  col-span-4  p-2"
+              class="w-full row-span-1 lg:col-span-1  col-span-4  p-4"
               v-for="entry in posts"
               :key="entry.node.id"
             >

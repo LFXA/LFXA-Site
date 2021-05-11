@@ -8,13 +8,14 @@ import { faGithub, faLinkedinIn, faStackOverflow } from '@fortawesome/free-brand
 import { i18n } from '../src/i18n'
 import VueTippy, { TippyComponent } from "vue-tippy";
 import VueFuse from 'vue-fuse'
-import 'vssue/dist/vssue.css'
+
 config.autoAddCss = false;
 library.add(faGithub, faLinkedinIn, faBars, faStackOverflow, faCertificate, faSun, faMoon)
 import VueDisqus from 'vue-disqus'
 
 // import Vssue from 'vssue';
 // import GithubV3 from '@vssue/api-github-v3';
+// import 'vssue/dist/vssue.css'
 export default function (Vue, { router, head, isClient, appOptions }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
@@ -23,6 +24,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   appOptions.i18n = i18n
   Vue.use(VueTippy);
   Vue.use(VueFuse);
+
   Vue.use(VueDisqus);
   // Vue.use(Vssue, {
   //   api: GithubV3,
