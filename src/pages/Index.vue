@@ -1,5 +1,5 @@
 <template>
-  <Layout> <index></index> </Layout>
+  <Layout> <index  :postsHome="$page.allPosts.edges"></index> </Layout>
 </template>
 
 <script>
@@ -13,3 +13,17 @@ export default {
   },
 };
 </script>
+<page-query>
+  query {    
+    allPosts(filter: {lang:{ eq: "pt-br"}}, limit: 5, order: DESC) {     
+      edges {
+        node {
+          title
+          path
+          image   
+          excerpt       
+        }
+      }
+    }
+  }
+</page-query>

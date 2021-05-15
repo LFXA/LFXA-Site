@@ -17,7 +17,7 @@
           <a href="https://tailwindcss.com/" target="_blank">TailwindCSS. </a>
         </p>
 
-        <ul class="flex items-center space-x-8">
+        <ul class="flex items-center">
           <li
             class="mr-4"
             v-for="element in $static.metadata.social"

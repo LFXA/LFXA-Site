@@ -3,6 +3,10 @@
     <h1 class="page-title">Bem vindo!</h1>
     <div class="content">
       <p>MEU SITE</p>
+      <vueper-slides class=" mb-7" bullets-outside fixed-height="500px" >
+        <vueper-slide v-for="(slide, i) in postsHome" :key="i" :title="slide.node.title" :content="slide.node.excerpt" :image="slide.node.image" :link="slide.node.path">
+        </vueper-slide>
+      </vueper-slides>
     </div>
     <div class="overflow-x-hidden">
       <div class="contact-me bg-background-primary p-1 content-wrapper rounded-lg">
@@ -79,7 +83,32 @@
 <script>
 export default {
   name: "index",
+   props:{
+    postsHome:Array,   
+    },    
 };
 </script>
 <style>
+.vueperslide__title {
+  font-size: 3em;
+}
+
+.vueperslide__content-wrapper{
+   background-color: rgba(0, 0, 0, 0.7);   
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;   
+   text-align: center;  
+   border-radius: 20%;
+   max-height:50%;
+   transform: translateY(50%);  
+}
+
+@media only screen and (max-width: 600px) {
+  .vueperslide__content-wrapper{
+    width: 100%;
+  }
+}
+
 </style>

@@ -86,6 +86,6 @@ export default {
     posts:Array,
     categories: Array,
     alltags: Array
-    },    
+    },
 };
 </script>

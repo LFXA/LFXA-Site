@@ -7,9 +7,13 @@
 </template>
 
 <script>
+import Projetos from "../../layouts/section/Projetos";
 export default {
   metaInfo: {
-    title: "Projetos",
+    title: "Projects",
+  },
+  components: {
+    Projetos,
   },
 };
 </script>
