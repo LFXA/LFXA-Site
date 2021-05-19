@@ -7,6 +7,7 @@ export const aboutPagePTBR =
     textLink: "aqui.",
     text4: "Este site não é apenas uma apresentação profissional, mas pessoal, onde coloco novos aprendizados e ideias.",
     text5: "Aqui estão algumas das minhas habilidades:",
+    link: "blog/porque-minhas-habilidades-nao-estao-100/"
 }
 
 export const aboutPageENUS =
@@ -18,6 +19,7 @@ export const aboutPageENUS =
     textLink: "here.",
     text4: "This site is not just a professional presentation, but a personal one, where I put new learnings and ideas",
     text5: "Here are some of my skills:",
+    link: "blog/why-my-skills-are-not-100/"
 }
 
 

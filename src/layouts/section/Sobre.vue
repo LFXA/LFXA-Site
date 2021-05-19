@@ -16,7 +16,7 @@
           {{ $t("about.text1") }}
           <span class="italic font-extrabold">Lucas Felix Aquino</span>,
           {{ $t("about.text2") }} {{ calculaIdade(idade) }}
-          {{ $t("about.text3") }} <g-link>{{ $t("about.textLink") }}</g-link>
+          {{ $t("about.text3") }} <g-link :to="$t('about.link')">{{ $t("about.textLink") }}</g-link>
         </p>
         <p class="font-extrabold">
           <br />

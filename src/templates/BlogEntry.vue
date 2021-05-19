@@ -12,7 +12,7 @@
           <time :datetime="$page.posts.datetime">{{ $page.posts.humanTime }}</time>
           <p class="px-2">—</p>
           <p class="category">
-            Posted in
+           {{$t("blog.postedIn")}}
             <g-link :to="$page.posts.category.path">{{ $page.posts.category.title }}</g-link>
           </p>
         </div>
