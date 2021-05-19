@@ -95,12 +95,12 @@ export default {
 
 .vueperslide__content-wrapper{
    background-color: rgba(0, 0, 0, 0.7);   
-   width: 50%;
+   width: 70%;
    display: flex;
    justify-content: center;
    align-items: center;   
    text-align: center;  
-   border-radius: 20%;
+   border-radius: 10%;
    max-height:50%;
    transform: translateY(50%);  
 }

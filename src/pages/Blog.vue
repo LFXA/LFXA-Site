@@ -47,6 +47,7 @@ export default {
         title
         id
         path
+        lang
         belongsTo{
           totalCount
         }

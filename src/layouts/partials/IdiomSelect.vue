@@ -34,7 +34,10 @@ export default {
       document.documentElement.lang = this.idiom;
       let link = this.findPath(this.$i18n.messages[this.$i18n.locale].link);
       this.$i18n.locale = this.idiom;
-      this.$router.push(this.$t("link." + link));
+      if(link)
+        this.$router.push(this.$t("link." + link));
+      else
+           this.$router.push(this.$t("link.home"));
     },
     verifySelected(element) {
       let routerSplit = this.$router.history.current.path.split("/");
