@@ -46,7 +46,7 @@ module.exports = function (api) {
       });      
       for (const postTag of post.tags){
       tags.addNode({
-            id: postTag +'.'+ post.lang,
+            id: postTag,
             title: postTag,
             path: '/tag/'+postTag,
             lang: post.lang
