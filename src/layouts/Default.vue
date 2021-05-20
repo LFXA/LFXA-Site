@@ -21,7 +21,7 @@
         </li>
       </HeaderPartial>
 
-      <main id="main" class="main flex flex-col mt-32 py-10 lg:py-20">
+      <main id="main" class="main flex flex-1 flex-col mt-32 py-10 lg:py-20">
         <slot />
       </main>
 

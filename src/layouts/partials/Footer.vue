@@ -2,13 +2,13 @@
   <div class="footer-wrapper">
     <footer
       id="footer"
-      class="footer content-wrapper items-center p-8 mb-10 md:mb-0 sm:flex-col bg-background-secondary"
+      class="footer content-wrapper  bg-background-secondary"
       role="contentinfo"
     >
       <div
-        class="footer-inner container mx-auto flex sm:space-y-6 justify-between flex-col lg:flex-row items-center py-8"
+        class="footer-inner container m-auto md:flex mb-12 md:mb-0  justify-between items-center   px-6 py-10"
       >
-        <p class="text-white mb-6 lg:mb-0">
+        <p class="text-white pb-8 md:pb-0">
           {{ $t("footerMsg1") }}
           <span class="italic font-semibold">Lucas Felix Aquino,</span>
           {{ $t("footerMsg2") }}
@@ -17,7 +17,7 @@
           <a href="https://tailwindcss.com/" target="_blank">TailwindCSS. </a>
         </p>
 
-        <ul class="flex items-center">
+        <ul class="flex justify-center">
           <li
             class="mr-4"
             v-for="element in $static.metadata.social"
