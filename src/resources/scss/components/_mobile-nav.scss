@@ -30,7 +30,7 @@ $transition-length: 0.5s;
 .mobile-nav {
     transform: translate3d(-100%, 0, 0);
     transition: transform $transition-length $transition-easing;
-    transition-delay: 0.1s;
+    transition-delay: 0.3s;
     will-change: transform;
 
     &.menu-visible {

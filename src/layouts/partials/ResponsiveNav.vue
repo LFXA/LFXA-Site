@@ -6,7 +6,7 @@
       :class="toggleNav ? 'menu-visible' : ''"
     >
       <ul>
-        <li class="mb-6 lg:mb-0">
+        <li class="mb-6 md:mb-0">
           <search-input />
         </li>
         <li

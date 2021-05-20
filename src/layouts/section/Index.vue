@@ -3,7 +3,7 @@
     <h1 class="page-title">Bem vindo!</h1>
     <div class="content">
       <p>MEU SITE</p>
-      <vueper-slides class=" mb-7" bullets-outside fixed-height="500px" >
+      <vueper-slides class=" mb-7" bullets-outside fixed-height="700px" >
         <vueper-slide v-for="(slide, i) in postsHome" :key="i" :title="slide.node.title" :content="slide.node.excerpt" :image="slide.node.image" :link="slide.node.path">
         </vueper-slide>
       </vueper-slides>
@@ -90,7 +90,7 @@ export default {
 </script>
 <style>
 .vueperslide__title {
-  font-size: 3em;
+  font-size: 2.1em;
 }
 
 .vueperslide__content-wrapper{
@@ -103,6 +103,7 @@ export default {
    border-radius: 10%;
    max-height:50%;
    transform: translateY(50%);  
+   padding: 8px;
 }
 
 @media only screen and (max-width: 600px) {
