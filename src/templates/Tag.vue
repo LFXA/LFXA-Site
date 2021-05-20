@@ -5,13 +5,13 @@
         class="page-title text-black-900 text-3xl md:text-center md:text-5xl mb-16 lg:mb-24 lg:text-6xl"
       >Tag — {{ $page.tag.title }}</h1>
       <div class="posts">
-        <article
+        <article 
           class="text-gray-500 mb-8 pb-8 border-b border-gray-200"
-          v-for="element in $page.tag.belongsTo.edges"
-          :key="element.node.id"
+          v-for="element in posts"
+          :key="element.node.id"  
         >
-          <h2 class="text-4xl mb-3">
-            <g-link
+          <h2 class="text-4xl mb-3" >
+            <g-link 
               class="block text-black-500 hover:text-blue-900"
               :to="element.node.path"
             >{{ element.node.title }}</g-link>
@@ -28,6 +28,7 @@
   query($id: ID!) {
     tag(id: $id) {
       title
+      lang
       belongsTo {
         edges {
           node {
@@ -37,6 +38,7 @@
               path 
               humanTime : created(format:"Do MMMM YYYY")
               datetime : created(format:"ddd MMM DD YYYY hh:mm:ss zZ")
+              lang
             }
           }
         }
@@ -50,6 +52,11 @@
 export default {
   metaInfo: {
     title: "Tags"
+  },
+  computed:{
+    posts(){
+     return this.$page.tag.belongsTo.edges.filter(e=>e.node.lang == this.$i18n.locale)
+    }
   }
 };
 </script>
