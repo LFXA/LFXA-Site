@@ -49,6 +49,13 @@ export default {
         path
         lang
         belongsTo{
+           edges{
+            node{
+              ... on posts {
+                lang
+              }
+            }
+            }
           totalCount
         }
       }

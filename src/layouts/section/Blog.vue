@@ -69,7 +69,7 @@
           <h4 class="m-5">Tags</h4>
            <div class=" p-1 mx-2"  v-for="entryTag in alltags" :key="entryTag.node.id">   
               <g-link class="flex text-copy-primary justify-between" :to="entryTag.node.path"><span>{{entryTag.node.title}} </span>
-                <span class="rounded-full h-6 w-6 flex items-center justify-center  text-copy-primary bg-blue-500 text-xl">  {{entryTag.node.belongsTo.totalCount}}
+                <span class="rounded-full h-6 w-6 flex items-center justify-center  text-copy-primary bg-blue-500 text-xl">  {{entryTag.node.belongsTo.edges.filter(e=>e.node.lang == $i18n.locale).length}}
                    </span> 
               </g-link>           
            </div> 
@@ -87,5 +87,10 @@ export default {
     categories: Array,
     alltags: Array
     },
+  computed:{
+    tags(){
+     return this.alltags.belongsTo.edges.filter(e=>e.node.lang == this.$i18n.locale).length
+    }
+  }
 };
 </script>
